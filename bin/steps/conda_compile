@@ -5,6 +5,7 @@ if [ ! -d /app/.heroku/miniconda ]; then
     rm -fr Miniconda2-latest-Linux-x86_64.sh
     
     conda config --append channels conda-forge
+    conda config --set restore_free_channel true
 
     conda install pip --yes | indent
 fi
